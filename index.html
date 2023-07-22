@@ -2,54 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=name"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News App</title>
     <link rel="stylesheet" href="style.css">
-    'x-api-key':i-VttzUBQcI_ugokLILxcix7DDki9oPUFO388MvYXZQ%27
+    <link rel="stylesheet" href="media.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
     <nav>
-        <div class="main-nav container flex">
-            <a href="#" class="company-logo" onclick="reload()">
-                <img src="./assets/worldwID.png" alt="" srcset="">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item"id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
-                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
-                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
-                </ul>
+
+        <a href="#" class="company-logo">
+            <img src="./assets/worldwID.png" alt="" srcset="">
+        </a>
+
+        <div class="nav-content">
+
+            <ul class="nav-items">
+                <li class="hover-link nav-item"><a href="#" id="ipl" onclick="onNavItemClick('ipl')">IPL</a></li>
+                <li class="hover-link nav-item"><a href="#" id="finance" onclick="onNavItemClick('finance')">FINANCE</a></li>
+                <li class="hover-link nav-item"><a href="#" id="politics" onclick="onNavItemClick('politics')">POLITICS</a></li>
+            </ul>
+
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search-outline" class="searchBtn search-button" id="search-button"></ion-icon>
+                    <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+                </span>
             </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="e.g. Science" id="search-text">
-                <button class="search-button" id="search-button">Search</button>
-            </div>
+
+            <ion-icon name="menu-outline" class="menu-toggle"></ion-icon>
+
         </div>
+
+        <div class="search-bar">
+            <input type="text" class="news-input" placeholder="e.g. Science" id="search-text">
+        </div>
+
     </nav>
 
 
+
     <main>
+
         <div class="cards-container container flex" id="cards-container">
 
         </div>
+
     </main>
+
 
 
 
     <template id="template-news-card">
         <div class="card">
+
             <div class="card-header">
                 <img src="https://via.placeholder.com/400x200" alt="News-Image" id="news-img">
             </div>
+
             <div class="card-content">
                 <h3 id="news-title">This is the Title</h3>
                 <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
                 <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, saepe!</p>
             </div>
+
         </div>
     </template>
+ 
 
 
-    <script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+<script src="scriptResponsive.js"></script>
 </body>
 </html>
